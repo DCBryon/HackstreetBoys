@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const API_KEY = "ENTER KEY"; // Store the API key in one place
+const API_KEY = "37158ecad1496b88e0ccf230ee00a86ccd57bc2b"; // Store the API key in one place
 
 const ImageUploader = () => {
     const [selectedFile, setSelectedFile] = useState(null);
@@ -24,67 +24,69 @@ const ImageUploader = () => {
         }
     };
 
-    // Handle file upload and Logmeal API interaction
     const handleUpload = async () => {
         if (!selectedFile) {
             alert("Please select a file first.");
             return;
         }
-
+    
         const formData = new FormData();
         formData.append("image", selectedFile);
-
+    
         try {
             // Upload the image to Logmeal for segmentation
-            const uploadResponse = await fetch(
-                "https://api.logmeal.com/v2/image/segmentation/complete",
-                {
-                    method: "POST",
-                    headers: {
-                        Authorization: `Bearer ${API_KEY}`,
-                    },
-                    body: formData,
-                }
-            );
-
+            const uploadResponse = await fetch("https://api.logmeal.com/v2/image/segmentation/complete", {
+                method: "POST",
+                headers: { Authorization: `Bearer ${API_KEY}` },
+                body: formData,
+            });
+    
             if (!uploadResponse.ok) {
                 console.error("Upload failed:", uploadResponse.statusText);
                 return;
             }
-
+    
             const uploadData = await uploadResponse.json();
             console.log("Image Segmentation Success:", uploadData);
-
-            // Fetch ingredients information using the imageId from segmentation
-            const ingredientsResponse = await fetch(
-                "https://api.logmeal.com/v2/recipe/ingredients",
-                {
-                    method: "POST",
-                    headers: {
-                        Authorization: `Bearer ${API_KEY}`,
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        imageId: uploadData.imageId,
-                    }),
-                }
-            );
-
+    
+            // Fetch ingredients information
+            const ingredientsResponse = await fetch("https://api.logmeal.com/v2/recipe/ingredients", {
+                method: "POST",
+                headers: {
+                    Authorization: `Bearer ${API_KEY}`,
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ imageId: uploadData.imageId }),
+            });
+    
             if (!ingredientsResponse.ok) {
                 console.error("Ingredients Fetch failed:", ingredientsResponse.statusText);
                 return;
             }
-
+    
             const ingredientsData = await ingredientsResponse.json();
             setIngredients(ingredientsData.foodName || []);
-
-            // Save ingredients to local storage
-            localStorage.setItem("ingredientsData", JSON.stringify(ingredientsData.foodName || []));
-            console.log("Ingredients data saved to local storage");
+    
+            // Send the ingredients data to the backend for storage
+            await fetch("http://localhost:5000/save-ingredients", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(ingredientsData),
+            });
+    
+            console.log("Ingredients data sent to backend");
         } catch (error) {
             console.error("Error uploading file:", error);
         }
     };
+
+    // Fetch ingredients list from backend
+    useEffect(() => {
+        fetch("http://localhost:5000/api/ingredients") // Request from backend
+            .then((response) => response.json()) // Parse JSON
+            .then((data) => setIngredients(data)) // Store in state (no sorting here)
+            .catch((error) => console.error("Error fetching data:", error));
+    }, []);
 
     return (
         <div style={{ textAlign: "center", padding: "20px" }}>
