@@ -1,10 +1,8 @@
-# HackstreetBoys
-
-## Overview
-
+# Hackstreet Boys Overview
+...
 # Setup
 
-## How to Download
+## 1. How to Download
 ...
-## How to Use
-
+## 2. How to Use
+...
