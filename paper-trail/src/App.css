@@ -1,38 +1,79 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex: auto;
+  flex-direction: column;
+  background-color: #f0f4f7; /* Soft light background for the whole app */
+  height: 100%; /* Full height to center elements */
+}
+
+h2 {
+  padding: 20px;
+}
+
+button {
+  background-color: #4CAF50; /* Primary green color */
   color: white;
+  padding: 12px 24px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #45a049; /* Slightly darker shade on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list-box {
+  padding: 20px;
+  border: 2px solid #A1B5C4; /* Soft gray-blue border */
+  border-radius: 8px;
+  background-color: #ffffff; /* Clean white background */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 80%; /* Control width of the list box */
+  max-width: 400px; /* Maximum width for better responsiveness */
+}
+
+.list-box ul {
+  list-style-type: none; /* Hide bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.list-box li {
+  background-color: #f7f9fc; /* Soft light blue background for list items */
+  border: 2px solid #d1dbe5; /* Light gray border */
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+  color: #333333; /* Darker text for readability */
+}
+
+.ingredient-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid gainsboro;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.remove-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-left: 10px;
+}
+
+.remove-btn:hover {
+  background-color: darkred;
 }
