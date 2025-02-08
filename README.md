@@ -8,7 +8,7 @@ Core functionality still needed:
 
 We got this team :D
 
--# Also I changed our default directory, to "Backend-test", so watch out for that
+### Also I changed our default directory, to "Backend-test", so watch out for that
 
 # Setup
 
