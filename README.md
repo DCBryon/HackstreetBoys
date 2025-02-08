@@ -7,6 +7,8 @@ Core functionality still needed:
   - Display the recipes to the user
 We got this team :D
 
+Also I changed our default directory, to "Backend-test", so watch out for that
+
 # Setup
 
 ## 1. How to Download
