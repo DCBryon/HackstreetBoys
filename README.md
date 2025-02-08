@@ -5,6 +5,7 @@ Core functionality still needed:
   - Get an ai API working on our web app. (openai, gemini, etc.)
   - Feed the ai all the ingredients and get it to generate recipes
   - Display the recipes in a user friendly format
+    
 Nice to haves:
   - Allow user to add & remove items in the list of detected foods
   - Prettty formatting
