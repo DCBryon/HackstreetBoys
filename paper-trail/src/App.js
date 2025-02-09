@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
 
-const { generateRecipes, parseRecipes, generateRecipesInternal } = require('./recipeGenerator'); // Import generateRecipesInternal
-
 const API_KEY = process.env.REACT_APP_API_KEY; // Store the API key in one place
 
 const ImageUploader = () => {
@@ -11,9 +9,6 @@ const ImageUploader = () => {
     const [ingredients, setIngredients] = useState([]);
     const [newIngredient, setNewIngredient] = useState("");
     const [showModal, setShowModal] = useState(false);
-    const [recipes, setRecipes] = useState(null);  // State to hold the fetched recipes
-    const [loading, setLoading] = useState(false);  // Loading state
-    const [error, setError] = useState(null);       // Error state
 
     // Load ingredients from local storage on component mount
     useEffect(() => {
@@ -119,30 +114,9 @@ const ImageUploader = () => {
         //localStorage.setItem("ingredientsData", JSON.stringify(updatedIngredients)); // Update local storage
     };
 
-    const fetchRecipes = async () => {
-        setLoading(true);    // Set loading to true when the fetch starts
-        setError(null);      // Clear any previous errors
-
-        try {
-            // Assuming generateRecipes is the function you provided
-            const fetchedRecipes = await generateRecipes(['apple', 'banana'], []);  // Pass ingredients dynamically
-    
-            if (fetchedRecipes && fetchedRecipes.length > 0) {
-                setRecipes(fetchedRecipes);  // Set the fetched recipes in the state
-            } else {
-                setError("No recipes found with the current ingredients.");
-            }
-        } catch (err) {
-            console.error("Error fetching recipes:", err);
-            setError("An error occurred while fetching recipes.");
-        } finally {
-            setLoading(false);  // Set loading to false after the fetch completes
-        }
-    };
-
     return (
-        <div className='App'>
-            <div className="header-container">
+        <div className='App' tyle={{ textAlign: "center", padding: "20px" }}>
+             <div className="header-container">
                 <h2>Upload an Image of Your Ingredients!</h2>
                 <button className="help-btn" onClick={toggleModal}>?</button>
             </div>
@@ -193,28 +167,7 @@ const ImageUploader = () => {
                         />
                         <button onClick={addIngredient} className="add-btn">Add</button>
                     </div>
-                    <button className="view-recipes-btn" onClick={fetchRecipes}>View Recipes</button>
-                </div>
-            )}
-
-            {loading && <p>Loading recipes...</p>}  {/* Show loading message */}
-            {error && <p style={{ color: 'red' }}>{error}</p>}  {/* Show error message */}
-
-            {/* Show recipes if available */}
-            {recipes && (
-                <div>
-                    <h3>Recipes:</h3>
-                    <ul>
-                        {recipes.map((recipe, index) => (
-                            <li key={index}>
-                                <strong>{recipe.name}</strong>: {recipe.description}
-                                <ul>
-                                    <li><strong>Ingredients:</strong> {recipe.ingredients.join(", ")}</li>
-                                    <li><strong>Instructions:</strong> {recipe.instructions.join(", ")}</li>
-                                </ul>
-                            </li>
-                        ))}
-                    </ul>
+                    <button className="view-recipes-btn">View Recipes</button>
                 </div>
             )}
         </div>

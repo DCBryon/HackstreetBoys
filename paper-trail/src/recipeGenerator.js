@@ -1,3 +1,5 @@
+module.exports = { generateRecipes };
+
 // Improved: generateRecipesInternal
 async function generateRecipesInternal(ingredients, dietaryRestrictions, gem2token, customPrompt) {
     const modelEndpoint = "https://api-inference.huggingface.co/models/google/gemma-2-2b-it";
@@ -7,14 +9,14 @@ async function generateRecipesInternal(ingredients, dietaryRestrictions, gem2tok
     if (customPrompt && customPrompt.trim()) {
       prompt = customPrompt.trim();
     } else {
-      prompt = `Generate a healthy and tasty recipe in the following JSON format without trailing commas:
+      prompt = `Generate a recipe in the following JSON format without trailing commas:
   {
     "name": "Recipe Name",
     "description": "A short description",
     "ingredients": ["ingredient 1", "ingredient 2"],
     "instructions": ["step 1", "step 2"]
   }
-  Using some or all of the following ingredients: ${ingredients.join(", ")}.`;
+  Using the following ingredients: ${ingredients.join(", ")}.`;
       if (dietaryRestrictions && dietaryRestrictions.length > 0) {
         prompt += ` Consider these dietary restrictions: ${dietaryRestrictions.join(", ")}.`;
       }
@@ -102,7 +104,7 @@ async function generateRecipesInternal(ingredients, dietaryRestrictions, gem2tok
   
   // Public wrapper function that returns null if the result is the default sample.
   async function generateRecipes(ingredients, dietaryRestrictions) {
-    const gem2token = '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';
+    const gem2token = process.env.GEM2_ACCESS_TOKEN;
     if (!gem2token) {
       throw new Error("GEM2 API key is missing. Set the GEM2_ACCESS_TOKEN environment variable.");
     }
