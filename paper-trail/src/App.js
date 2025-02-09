@@ -11,6 +11,9 @@ const ImageUploader = () => {
     const [ingredients, setIngredients] = useState([]);
     const [newIngredient, setNewIngredient] = useState("");
     const [showModal, setShowModal] = useState(false);
+    const [recipes, setRecipes] = useState(null);  // State to hold the fetched recipes
+    const [loading, setLoading] = useState(false);  // Loading state
+    const [error, setError] = useState(null);       // Error state
 
     // Load ingredients from local storage on component mount
     useEffect(() => {
@@ -136,8 +139,8 @@ const ImageUploader = () => {
     };
 
     return (
-        <div className='App' tyle={{ textAlign: "center", padding: "20px" }}>
-             <div className="header-container">
+        <div className='App'>
+            <div className="header-container">
                 <h2>Upload an Image of Your Ingredients!</h2>
                 <button className="help-btn" onClick={toggleModal}>?</button>
             </div>
