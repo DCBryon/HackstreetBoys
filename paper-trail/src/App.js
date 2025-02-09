@@ -152,6 +152,7 @@ const ImageUploader = () => {
                         />
                         <button onClick={addIngredient} className="add-btn">Add</button>
                     </div>
+                    <button className="view-recipes-btn">View Recipes</button>
                 </div>
             )}
         </div>

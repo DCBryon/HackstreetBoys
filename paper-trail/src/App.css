@@ -16,7 +16,7 @@
 button {
   background-color: #4CAF50; /* Primary green color */
   color: white;
-  padding: 12px 24px;
+  padding: 10px 24px;
   font-size: 1em;
   border: none;
   border-radius: 5px;
@@ -26,6 +26,10 @@ button {
 
 button:hover {
   background-color: #45a049; /* Slightly darker shade on hover */
+}
+
+h2 {
+  padding: 15px;
 }
 
 .list-box {
@@ -79,7 +83,8 @@ button:hover {
 }
 
 .manual-input {
-  padding: 10px;
+  padding: 5px;
+  margin-top: 10px;
 }
 
 .manual-input input {
@@ -87,6 +92,14 @@ button:hover {
   border: 2px solid gray;
   border-radius: 5px;
   font-size: 1em; /* Increased font size */
-  width: 250px; /* Wider input field */
+  width: 260px; /* Wider input field */
   transition: border-color 0.3s ease;
+}
+
+.add-btn {
+  margin-left: 8px;
+}
+
+.view-recipes-btn {
+  margin-top: 10px;
 }
