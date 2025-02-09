@@ -7,7 +7,7 @@
   
   body {
     font-family: Arial, sans-serif; /* Use consistent font */
-    background-color: #E5EAD6; /* Light background color for the page */
+    background: linear-gradient(to bottom, #E5EAD6, #D1D7B1);
     color: #333; /* Dark text color for readability */
   }
   
