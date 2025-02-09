@@ -51,7 +51,7 @@ function generateDefaultPrompt(ingredients, dietaryRestrictions) {
   let prompt = `Generate a healthy and tasty recipe in the following text format:
   Recipe Name: Recipe Name
   Description: A short description
-  Calores: Calorie count
+  Calories: Calorie count
   Ingredients: ingredient 1, ingredient 2, ingredient 3
   Instructions: step 1, step 2, step 3
   Using some or all of the following ingredients: ${ingredients.join(", ")}.`;
