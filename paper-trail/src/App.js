@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
 
-const { generateRecipes, parseRecipes, generateRecipesInternal } = require('./recipeGenerator'); // Import generateRecipesInternal
+const { generateRecipes} = require('./recipeGenerator'); // Import generateRecipesInternal
 
 const API_KEY = process.env.REACT_APP_API_KEY; // Store the API key in one place
 
@@ -108,7 +108,7 @@ const ImageUploader = () => {
         if (newIngredient.trim() !== "") {
             const updatedIngredients = [...ingredients, newIngredient.trim()];
             setIngredients(updatedIngredients);
-            //localStorage.setItem("ingredientsData", JSON.stringify(updatedIngredients));
+            localStorage.setItem("ingredientsData", JSON.stringify(updatedIngredients));
             setNewIngredient("");
         }
     };
@@ -116,7 +116,7 @@ const ImageUploader = () => {
     const removeIngredient = (index) => {
         const updatedIngredients = ingredients.filter((_, i) => i !== index);
         setIngredients(updatedIngredients);
-        //localStorage.setItem("ingredientsData", JSON.stringify(updatedIngredients)); // Update local storage
+        localStorage.setItem("ingredientsData", JSON.stringify(updatedIngredients)); // Update local storage
     };
 
     const fetchRecipes = async () => {
@@ -124,9 +124,7 @@ const ImageUploader = () => {
         setError(null);      // Clear any previous errors
 
         try {
-            // Assuming generateRecipes is the function you provided
-            const fetchedRecipes = await generateRecipes(['apple', 'banana'], []);  // Pass ingredients dynamically
-    
+            const fetchedRecipes = await generateRecipes(ingredients, []);  // Pass ingredients dynamically
             if (fetchedRecipes && fetchedRecipes.length > 0) {
                 setRecipes(fetchedRecipes);  // Set the fetched recipes in the state
             } else {
@@ -202,20 +200,10 @@ const ImageUploader = () => {
 
             {/* Show recipes if available */}
             {recipes && (
-                <div>
-                    <h3>Recipes:</h3>
-                    <ul>
-                        {recipes.map((recipe, index) => (
-                            <li key={index}>
-                                <strong>{recipe.name}</strong>: {recipe.description}
-                                <ul>
-                                    <li><strong>Ingredients:</strong> {recipe.ingredients.join(", ")}</li>
-                                    <li><strong>Instructions:</strong> {recipe.instructions.join(", ")}</li>
-                                </ul>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+            <div className='recipes-box'>
+                <h3>Recipes:</h3>
+                <pre>{recipes}</pre>
+            </div>
             )}
         </div>
     );

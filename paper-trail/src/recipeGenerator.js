@@ -1,236 +1,117 @@
-// Improved: generateRecipesInternal
-async function generateRecipesInternal(ingredients, dietaryRestrictions, gem2token, customPrompt) {
-    const modelEndpoint = "https://api-inference.huggingface.co/models/google/gemma-2-2b-it";
-  
-    // Build the prompt
-    let prompt = "";
-    if (customPrompt && customPrompt.trim()) {
-      prompt = customPrompt.trim();
-    } else {
-      prompt = `Generate a healthy and tasty recipe in the following JSON format without trailing commas:
-  {
-    "name": "Recipe Name",
-    "description": "A short description",
-    "ingredients": ["ingredient 1", "ingredient 2"],
-    "instructions": ["step 1", "step 2"]
+const fetch = require("node-fetch");
+
+async function generateRecipeText(ingredients, dietaryRestrictions, API_KEY, customPrompt) {
+  const modelEndpoint = "https://api-inference.huggingface.co/models/google/gemma-2-2b-it";
+
+  // Build the prompt
+  let prompt = customPrompt ? customPrompt.trim() : generateDefaultPrompt(ingredients, dietaryRestrictions);
+
+  console.log("Prompt being sent to API:", prompt);
+
+  // Simulated environment for testing
+  if (process.env.NODE_ENV === 'test') {
+    return simulateApiResponse(ingredients);
   }
+
+  // Normal API call
+  try {
+    const response = await fetch(modelEndpoint, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${API_KEY}`,  // Use environment variable
+      },
+      body: JSON.stringify({
+        inputs: prompt,
+        max_new_tokens: 1024,
+      }),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`API Error: ${response.status} - ${errorText}`);
+    }
+
+    const data = await response.json();
+    if (data && data.error) {
+      throw new Error(data.error);
+    }
+
+    const recipeText = data[0]?.generated_text?.trim();
+    console.log("Generated recipe text:", recipeText);
+
+    return parseRecipeText(recipeText);
+  } catch (error) {
+    console.error("Error generating recipe:", error);
+    throw error;
+  }
+}
+
+function generateDefaultPrompt(ingredients, dietaryRestrictions) {
+  let prompt = `Generate a healthy and tasty recipe in the following text format:
+  Recipe Name: Recipe Name
+  Description: A short description
+  Calores: Calorie count
+  Ingredients: ingredient 1, ingredient 2, ingredient 3
+  Instructions: step 1, step 2, step 3
   Using some or all of the following ingredients: ${ingredients.join(", ")}.`;
-      if (dietaryRestrictions && dietaryRestrictions.length > 0) {
-        prompt += ` Consider these dietary restrictions: ${dietaryRestrictions.join(", ")}.`;
-      }
-    }
   
-    console.log("Prompt being sent to API:", prompt);
-  
-    // --- SIMULATED RESPONSE FOR TEST ENVIRONMENT ---
-    if (process.env.NODE_ENV === 'test') {
-      let simulatedText;
-      if (ingredients.includes("invalid")) {
-        // Simulate the default sample response (which should be filtered out later)
-        simulatedText = `{
-          "name": "Recipe Name",
-          "description": "A short description",
-          "ingredients": ["ingredient 1", "ingredient 2"],
-          "instructions": ["step 1", "step 2"]
-        }`;
-      } else {
-        // Simulate a valid recipe response
-        simulatedText = `{
-          "name": "Apple Banana Delight",
-          "description": "A delightful recipe using apple and banana",
-          "ingredients": ["apple", "banana", "honey", "cinnamon"],
-          "instructions": ["Mix ingredients", "Bake for 20 minutes"]
-        }`;
-      }
-      console.log("Simulated API response:", simulatedText);
-      return parseRecipes(simulatedText);
-    }
-    // --- END SIMULATION ---
-  
-    // Normal API call if not in test environment.
-    try {
-      const response = await fetch(modelEndpoint, {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${gem2token}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          inputs: prompt,
-          max_new_tokens: 1024,
-        }),
-      });
-  
-      console.log("Full Response Object:", response);
-  
-      if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(`API Error: ${response.status} - ${errorText}`);
-      }
-  
-      let data;
-      try {
-        data = await response.json();
-        console.log("Parsed JSON Response Data:", data);
-  
-        if (data && data.error) {
-          console.error("Hugging Face API returned an error in JSON:", data.error);
-          throw new Error(data.error);
-        }
-      } catch (jsonError) {
-        console.error("Error parsing JSON from API response:", jsonError);
-        throw new Error("Invalid JSON response from API");
-      }
-  
-      if (!data || !Array.isArray(data) || data.length === 0 || !data[0].generated_text) {
-        console.error("Unexpected data format:", data);
-        throw new Error("Unexpected data format from API");
-      }
-  
-      const recipesText = data[0].generated_text.trim();
-      console.log("recipesText being passed to parseRecipes:", recipesText);
-  
-      const recipes = parseRecipes(recipesText);
-      console.log("Output of parseRecipes:", recipes);
-  
-      return recipes;
-    } catch (error) {
-      console.error("Error generating recipes:", error);
-      throw error;
-    }
+  if (dietaryRestrictions && dietaryRestrictions.length > 0) {
+    prompt += ` Consider these dietary restrictions: ${dietaryRestrictions.join(", ")}.`;
   }
-  
-  // Public wrapper function that returns null if the result is the default sample.
-  async function generateRecipes(ingredients, dietaryRestrictions) {
-    const gem2token = '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';
-    if (!gem2token) {
-      throw new Error("GEM2 API key is missing. Set the GEM2_ACCESS_TOKEN environment variable.");
-    }
-  
-    try {
-      const recipes = await generateRecipesInternal(ingredients, dietaryRestrictions, gem2token);
-      if (recipes && recipes.length > 0) {
-        // Check if every recipe equals the default sample.
-        const isDefault = recipes.every(recipe =>
-          recipe.name === "Recipe Name" &&
-          recipe.description === "A short description" &&
-          Array.isArray(recipe.ingredients) &&
-          recipe.ingredients.length === 2 &&
-          recipe.ingredients[0] === "ingredient 1" &&
-          recipe.ingredients[1] === "ingredient 2" &&
-          Array.isArray(recipe.instructions) &&
-          recipe.instructions.length === 2 &&
-          recipe.instructions[0] === "step 1" &&
-          recipe.instructions[1] === "step 2"
-        );
-        if (isDefault) {
-          return null;
-        }
-        return recipes;
-      }
-      return null;
-    } catch (error) {
-      console.error("Error in generateRecipes:", error);
-      return null;
-    }
+  return prompt;
+}
+
+function simulateApiResponse(ingredients) {
+  let simulatedText;
+  if (ingredients.includes("invalid")) {
+    // Simulate the default sample response (which should be filtered out later)
+    simulatedText = `Recipe Name: Recipe Name
+    Description: A short description
+    Ingredients: ingredient 1, ingredient 2
+    Instructions: step 1, step 2`;
+  } else {
+    // Simulate a valid recipe response
+    simulatedText = `Recipe Name: Apple Banana Delight
+    Description: A delightful recipe using apple and banana
+    Ingredients: apple, banana, honey, cinnamon
+    Instructions: Mix ingredients, Bake for 20 minutes`;
   }
-  
-  /**
-   * Helper function to extract the first balanced JSON object from text.
-   * It iterates from the first '{' and keeps track of nested braces, while also
-   * correctly handling strings.
-   */
-  function extractJSON(text) {
-    const start = text.indexOf('{');
-    if (start === -1) return null;
-  
-    let count = 0;
-    let inString = false;
-    let escaped = false;
-    for (let i = start; i < text.length; i++) {
-      const char = text[i];
-      if (inString) {
-        if (escaped) {
-          escaped = false;
-        } else if (char === '\\') {
-          escaped = true;
-        } else if (char === '"') {
-          inString = false;
-        }
-      } else {
-        if (char === '"') {
-          inString = true;
-        } else if (char === '{') {
-          count++;
-        } else if (char === '}') {
-          count--;
-          if (count === 0) {
-            return text.substring(start, i + 1);
-          }
-        }
-      }
-    }
-    return null; // No complete JSON object found.
+  console.log("Simulated API response:", simulatedText);
+  return simulatedText;
+}
+
+async function generateRecipes(ingredients, dietaryRestrictions) {
+  const API_KEY = process.env.GEM2_ACCESS_TOKEN; // Store the API key in one place
+  if (!API_KEY) {
+    throw new Error("GEM2 API key is missing. Set the GEM2_ACCESS_TOKEN environment variable.");
   }
-  
-  // Parsing function that uses extractJSON() and cleans trailing commas.
-  function parseRecipes(recipesText) {
-    try {
-      const jsonString = extractJSON(recipesText);
-      if (jsonString) {
-        // Remove any trailing commas (e.g., before a } or ])
-        const cleaned = jsonString.replace(/,\s*(\}|])/g, '$1');
-        const parsed = JSON.parse(cleaned);
-        if (Array.isArray(parsed)) {
-          return parsed;
-        } else if (parsed && typeof parsed === "object") {
-          return [parsed];
-        } else {
-          return [];
-        }
-      } else {
-        // Fallback: try cleaning and parsing the entire text.
-        const cleaned = recipesText.replace(/,\s*(\}|])/g, '$1');
-        const parsed = JSON.parse(cleaned);
-        if (Array.isArray(parsed)) {
-          return parsed;
-        } else if (parsed && typeof parsed === "object") {
-          return [parsed];
-        } else {
-          return [];
-        }
-      }
-    } catch (jsonError) {
-      console.error("JSON parsing failed:", jsonError);
-      console.error("Failing string:", recipesText);
-  
-      // Fallback: Try extracting using regex if the expected markdown format is present.
-      try {
-        const recipes = [];
-        const recipeRegex = /## Recipe:\s*(.+?)\n\n([\s\S]+?)\n\n\*\*Ingredients:\*\*\n\n([\s\S]+?)\n\n\*\*Instructions:\*\*\n\n([\s\S]+)/;
-        const match = recipesText.match(recipeRegex);
-        if (match) {
-          const recipe = {
-            name: match[1].trim(),
-            description: match[2].trim(),
-            ingredients: match[3]
-              .split('\n')
-              .map(i => i.trim().replace(/^\* /, ''))
-              .filter(i => i !== ''),
-            instructions: match[4]
-              .split('\n')
-              .map(i => i.trim().replace(/^\d+\. /, ''))
-              .filter(i => i !== '')
-          };
-          recipes.push(recipe);
-        }
-        return recipes;
-      } catch (regexError) {
-        console.error("Regex parsing failed:", regexError);
-        return []; // Return empty array if all parsing fails.
-      }
-    }
+
+  try {
+    const recipeText = await generateRecipeText(ingredients, dietaryRestrictions, API_KEY);
+    return recipeText ? recipeText : null;
+  } catch (error) {
+    console.error("Error in generateRecipes:", error);
+    return null;
   }
-  
-  module.exports = { generateRecipes, parseRecipes, generateRecipesInternal };
-  
+}
+
+function parseRecipeText(recipeText) {
+  try {
+    // Clean up and parse the text response
+    const cleanedText = recipeText.trim();
+    console.log("Cleaned recipe text:", cleanedText);
+
+    // Basic check for recipe structure
+    if (!cleanedText.includes("Recipe Name") || !cleanedText.includes("Description")) {
+      throw new Error("Invalid recipe structure.");
+    }
+
+    // Returning the recipe as text instead of object
+    return cleanedText;
+  } catch (error) {
+    console.error("Error parsing recipe text:", error);
+    return "Error: Unable to parse recipe text.";
+  }
+}
+
+module.exports = { generateRecipes, generateRecipeText, parseRecipeText };

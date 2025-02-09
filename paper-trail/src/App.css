@@ -183,3 +183,33 @@ img {
   border-radius: 5px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+.recipes-box {
+  background-color: #f8f8f8;  /* Light grey background */
+  border: 2px solid #ddd;    /* Light border */
+  border-radius: 8px;        /* Rounded corners */
+  padding: 20px;             /* Add padding inside the box */
+  margin-top: 20px;          /* Add space from previous content */
+  width: 100%;               /* Full width of the container */
+  max-width: 800px;          /* Limit max width for readability */
+  margin-left: auto;         /* Center the box horizontally */
+  margin-right: auto;        /* Center the box horizontally */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: justify;
+}
+
+.recipes-box pre {
+  white-space: pre-wrap;  /* Allow the text to wrap within the box */
+  word-wrap: break-word;  /* Ensure words break appropriately */
+  font-size: 16px;        /* Adjust font size */
+  line-height: 1.5;       /* Increase line spacing for readability */
+  color: #333;            /* Dark grey text color */
+}
+
+/* You can also adjust the heading in the recipes box */
+.recipes-box h3 {
+  font-size: 20px;         /* Increase heading size */
+  font-weight: bold;       /* Make the heading bold */
+  color: #444;             /* Dark grey color for the heading */
+  margin-bottom: 10px;     /* Space below the heading */
+}
