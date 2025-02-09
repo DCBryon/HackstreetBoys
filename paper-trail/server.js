@@ -3,7 +3,7 @@ require('dotenv').config() // for env variables
 
 const express = require('express');
 const app = express();
-const { generateRecipes } = require('./recipeGenerator'); // Import the function
+const { generateRecipes } = require('./src/recipeGenerator'); // Import the function
 
 app.use(express.json()); // To parse JSON request bodies
 
