@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/00afd6c8-e211-4a2c-9937-8206a23742e8/resourceGroups/FreshLens-rg/providers/Microsoft.Web/sites/FreshLens",
+    "appService.deploySubpath": "."
+}

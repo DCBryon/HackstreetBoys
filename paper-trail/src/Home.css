@@ -1,0 +1,76 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif; /* Use consistent font */
+    background-color: #E5EAD6; /* Light background color for the page */
+    color: #333; /* Dark text color for readability */
+  }
+  
+  /* Home Page */
+  .Home {
+    text-align: center;
+  }
+  
+  .Home-header {
+    background-color: #4E7151; /* Dark background for header */
+    padding: 40px;
+    color: white;
+    font-size: 2.5em; /* Larger text for header */
+    font-weight: bold; /* Bold text for emphasis */
+    border-bottom: 3px solid #E5EAD6; /* Green border for header separation */
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #4E7151; /* Match footer with header */
+    padding: 20px;
+    color: white;
+    text-align: center; /* Center footer text */
+    font-size: 1.1em;
+    margin-top: 20px; /* Add spacing above the footer */
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #B6C397; /* Dark navbar for consistency */
+    padding: 15px; /* Increase padding for a more spacious look */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    position: sticky; /* Ensure navbar stays on top when scrolling */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  .nav-links {
+    list-style-type: none; /* Remove bullet points */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 25px; /* Equal spacing between links */
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white; /* White text for navbar links */
+    font-size: 1.2em;
+    padding: 12px 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    font-weight: bold; /* Bold text for emphasis */
+  }
+  
+  .nav-links a:hover {
+    background-color: #4E7151; /* Green for hover effect */
+    color: white; /* Keep text white on hover */
+  }

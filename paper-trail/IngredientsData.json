@@ -1,0 +1,2461 @@
+{
+  "dish_id": [
+    2251,
+    1537,
+    1257,
+    1537,
+    101,
+    1286,
+    1196,
+    1286,
+    782,
+    1226,
+    1402,
+    1257,
+    1226,
+    1257,
+    782,
+    782,
+    1286
+  ],
+  "foodName": [
+    "egg",
+    "tomato",
+    "peppers",
+    "tomato",
+    "roast chicken",
+    "water",
+    "endives",
+    "water",
+    "grilled vegetables",
+    "lettuce",
+    "cheese",
+    "peppers",
+    "lettuce",
+    "peppers",
+    "grilled vegetables",
+    "grilled vegetables",
+    "water"
+  ],
+  "imageId": 1774186,
+  "is_combo": true,
+  "recipe": [
+    {
+      "id": 569,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 55,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 55,
+          "id": 13,
+          "name": "units",
+          "quantity": 1,
+          "type": "cooking_measures"
+        }
+      },
+      "name": "egg",
+      "unit": "g",
+      "weight": 55
+    },
+    {
+      "id": 112,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 456,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 456,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "name": "tomato",
+      "unit": "g",
+      "weight": 456
+    },
+    {
+      "id": 175,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 342,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 342,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "name": "pepper",
+      "unit": "g",
+      "weight": 342
+    },
+    {
+      "id": 269,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 200,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 175,
+          "id": 12,
+          "name": "fillets",
+          "quantity": 1.1428571428571428,
+          "type": "cooking_measures"
+        }
+      },
+      "name": "chicken (w/ bones)",
+      "unit": "g",
+      "weight": 200
+    },
+    {
+      "id": 427,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 160,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 160,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "name": "onion",
+      "unit": "g",
+      "weight": 160
+    },
+    {
+      "id": 395,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 30,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 30,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "name": "carrot",
+      "unit": "g",
+      "weight": 30
+    },
+    {
+      "id": 365,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 20,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 20,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "name": "celery",
+      "unit": "g",
+      "weight": 20
+    },
+    {
+      "id": 381,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 1,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 1,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "name": "garlic",
+      "unit": "g",
+      "weight": 1
+    },
+    {
+      "id": 121,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 2,
+          "name": "milliliters",
+          "quantity": 10,
+          "short": "ml",
+          "state": "liquid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 10,
+          "id": 1,
+          "name": "tablespoons",
+          "quantity": 1,
+          "type": "cooking_measures"
+        }
+      },
+      "name": "olive oil",
+      "unit": "ml",
+      "weight": 10
+    },
+    {
+      "id": 409,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 20,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 20,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "name": "lemon",
+      "unit": "g",
+      "weight": 20
+    },
+    {
+      "id": 465,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 0.8,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 0.8,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "name": "thyme",
+      "unit": "g",
+      "weight": 0.8
+    },
+    {
+      "id": 201,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 1,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 1,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "name": "rosemary",
+      "unit": "g",
+      "weight": 1
+    },
+    {
+      "id": 45,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 4,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 5,
+          "id": 5,
+          "name": "teaspoons",
+          "quantity": 0.8,
+          "type": "cooking_measures"
+        }
+      },
+      "name": "salt",
+      "unit": "g",
+      "weight": 4
+    },
+    {
+      "id": 73,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 2,
+          "name": "milliliters",
+          "quantity": 750,
+          "short": "ml",
+          "state": "liquid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 2,
+          "name": "milliliters",
+          "quantity": 750,
+          "short": "ml",
+          "state": "liquid",
+          "type": "weight"
+        }
+      },
+      "name": "water",
+      "unit": "ml",
+      "weight": 750
+    },
+    {
+      "id": 340,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 80,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 80,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "name": "endive",
+      "unit": "g",
+      "weight": 80
+    },
+    {
+      "id": 144,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 240,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 240,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "name": "courgette",
+      "unit": "g",
+      "weight": 240
+    },
+    {
+      "id": 610,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 180,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 180,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "name": "red pepper",
+      "unit": "g",
+      "weight": 180
+    },
+    {
+      "id": 145,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 240,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 240,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "name": "asparagus",
+      "unit": "g",
+      "weight": 240
+    },
+    {
+      "id": 562,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 2,
+          "name": "milliliters",
+          "quantity": 15,
+          "short": "ml",
+          "state": "liquid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 10,
+          "id": 1,
+          "name": "tablespoons",
+          "quantity": 1.5,
+          "type": "cooking_measures"
+        }
+      },
+      "name": "oil",
+      "unit": "ml",
+      "weight": 15
+    },
+    {
+      "id": 12,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 300,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 300,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "name": "lettuce",
+      "unit": "g",
+      "weight": 300
+    },
+    {
+      "id": 380,
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 30,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "preferred": {
+          "grams_conversion": 30,
+          "id": 19,
+          "name": "portions",
+          "quantity": 1,
+          "type": "cooking_measures"
+        }
+      },
+      "name": "cheese",
+      "unit": "g",
+      "weight": 30
+    }
+  ],
+  "recipe_per_item": [
+    {
+      "dish_id": 2251,
+      "foodGroups": [
+        {
+          "id": 12,
+          "name": "egg"
+        }
+      ],
+      "food_item_position": 1,
+      "hasRecipe": true,
+      "levels": {
+        "oil": "medium",
+        "salt": "medium",
+        "sugar": "medium"
+      },
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 55,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "portion": {
+          "grams_conversion": 55,
+          "quantity": 1,
+          "type": "portions"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 55,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "recipe": [
+        {
+          "id": 569,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 55,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 55,
+              "id": 13,
+              "name": "units",
+              "quantity": 1,
+              "type": "cooking_measures"
+            }
+          },
+          "name": "egg",
+          "unit": "g",
+          "weight": 55
+        }
+      ],
+      "serving_size": 55,
+      "unit": "g"
+    },
+    {
+      "dish_id": 1537,
+      "foodGroups": [
+        {
+          "id": 8,
+          "name": "vegetables"
+        }
+      ],
+      "food_item_position": 2,
+      "hasRecipe": true,
+      "levels": {
+        "oil": "medium",
+        "salt": "medium",
+        "sugar": "medium"
+      },
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 123,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "portion": {
+          "grams_conversion": 123,
+          "quantity": 1,
+          "type": "portions"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 123,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "recipe": [
+        {
+          "id": 112,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 123,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 123,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "tomato",
+          "unit": "g",
+          "weight": 123
+        }
+      ],
+      "serving_size": 123,
+      "unit": "g"
+    },
+    {
+      "dish_id": 1257,
+      "foodGroups": [
+        {
+          "id": 8,
+          "name": "vegetables"
+        }
+      ],
+      "food_item_position": 3,
+      "hasRecipe": true,
+      "levels": {
+        "oil": "medium",
+        "salt": "medium",
+        "sugar": "medium"
+      },
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 114,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "portion": {
+          "grams_conversion": 114,
+          "quantity": 1,
+          "type": "portions"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 114,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "recipe": [
+        {
+          "id": 175,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 114,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 114,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "pepper",
+          "unit": "g",
+          "weight": 114
+        }
+      ],
+      "serving_size": 114,
+      "unit": "g"
+    },
+    {
+      "dish_id": 1537,
+      "foodGroups": [
+        {
+          "id": 8,
+          "name": "vegetables"
+        }
+      ],
+      "food_item_position": 4,
+      "hasRecipe": true,
+      "levels": {
+        "oil": "medium",
+        "salt": "medium",
+        "sugar": "medium"
+      },
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 123,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "portion": {
+          "grams_conversion": 123,
+          "quantity": 1,
+          "type": "portions"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 123,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "recipe": [
+        {
+          "id": 112,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 123,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 123,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "tomato",
+          "unit": "g",
+          "weight": 123
+        }
+      ],
+      "serving_size": 123,
+      "unit": "g"
+    },
+    {
+      "dish_id": 101,
+      "foodGroups": [
+        {
+          "id": 1,
+          "name": "meat"
+        }
+      ],
+      "food_item_position": 5,
+      "hasRecipe": true,
+      "levels": {
+        "oil": "medium",
+        "salt": "medium",
+        "sugar": "medium"
+      },
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 293.8,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "portion": {
+          "grams_conversion": 293.8,
+          "quantity": 1,
+          "type": "portions"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 293.8,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "recipe": [
+        {
+          "id": 269,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 200,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 175,
+              "id": 12,
+              "name": "fillets",
+              "quantity": 1.1428571428571428,
+              "type": "cooking_measures"
+            }
+          },
+          "name": "chicken (w/ bones)",
+          "unit": "g",
+          "weight": 200
+        },
+        {
+          "id": 427,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 10,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 10,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "onion",
+          "unit": "g",
+          "weight": 10
+        },
+        {
+          "id": 395,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 30,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 30,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "carrot",
+          "unit": "g",
+          "weight": 30
+        },
+        {
+          "id": 365,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 20,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 20,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "celery",
+          "unit": "g",
+          "weight": 20
+        },
+        {
+          "id": 381,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 1,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 1,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "garlic",
+          "unit": "g",
+          "weight": 1
+        },
+        {
+          "id": 121,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 2,
+              "name": "milliliters",
+              "quantity": 10,
+              "short": "ml",
+              "state": "liquid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 10,
+              "id": 1,
+              "name": "tablespoons",
+              "quantity": 1,
+              "type": "cooking_measures"
+            }
+          },
+          "name": "olive oil",
+          "unit": "ml",
+          "weight": 10
+        },
+        {
+          "id": 409,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 20,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 20,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "lemon",
+          "unit": "g",
+          "weight": 20
+        },
+        {
+          "id": 465,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 0.8,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 0.8,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "thyme",
+          "unit": "g",
+          "weight": 0.8
+        },
+        {
+          "id": 201,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 1,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 1,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "rosemary",
+          "unit": "g",
+          "weight": 1
+        },
+        {
+          "id": 45,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 1,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 5,
+              "id": 5,
+              "name": "teaspoons",
+              "quantity": 0.2,
+              "type": "cooking_measures"
+            }
+          },
+          "name": "salt",
+          "unit": "g",
+          "weight": 1
+        }
+      ],
+      "serving_size": 293.8,
+      "unit": "g"
+    },
+    {
+      "dish_id": 1286,
+      "foodGroups": [
+        {
+          "id": 18,
+          "name": "beverage"
+        }
+      ],
+      "food_item_position": 6,
+      "hasRecipe": true,
+      "levels": {
+        "oil": "medium",
+        "salt": "medium",
+        "sugar": "medium"
+      },
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 2,
+          "name": "milliliters",
+          "quantity": 250,
+          "short": "ml",
+          "state": "liquid",
+          "type": "weight"
+        },
+        "portion": {
+          "grams_conversion": 250,
+          "quantity": 1,
+          "type": "portions"
+        },
+        "preferred": {
+          "grams_conversion": 250,
+          "id": 3,
+          "name": "glasses",
+          "quantity": 1,
+          "type": "cooking_measures"
+        }
+      },
+      "recipe": [
+        {
+          "id": 73,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 2,
+              "name": "milliliters",
+              "quantity": 250,
+              "short": "ml",
+              "state": "liquid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 2,
+              "name": "milliliters",
+              "quantity": 250,
+              "short": "ml",
+              "state": "liquid",
+              "type": "weight"
+            }
+          },
+          "name": "water",
+          "unit": "ml",
+          "weight": 250
+        }
+      ],
+      "serving_size": 250,
+      "unit": "ml"
+    },
+    {
+      "dish_id": 1196,
+      "foodGroups": [
+        {
+          "id": 8,
+          "name": "vegetables"
+        }
+      ],
+      "food_item_position": 7,
+      "hasRecipe": true,
+      "levels": {
+        "oil": "medium",
+        "salt": "medium",
+        "sugar": "medium"
+      },
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 80,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "portion": {
+          "grams_conversion": 80,
+          "quantity": 1,
+          "type": "portions"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 80,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "recipe": [
+        {
+          "id": 340,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 80,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 80,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "endive",
+          "unit": "g",
+          "weight": 80
+        }
+      ],
+      "serving_size": 80,
+      "unit": "g"
+    },
+    {
+      "dish_id": 1286,
+      "foodGroups": [
+        {
+          "id": 18,
+          "name": "beverage"
+        }
+      ],
+      "food_item_position": 8,
+      "hasRecipe": true,
+      "levels": {
+        "oil": "medium",
+        "salt": "medium",
+        "sugar": "medium"
+      },
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 2,
+          "name": "milliliters",
+          "quantity": 250,
+          "short": "ml",
+          "state": "liquid",
+          "type": "weight"
+        },
+        "portion": {
+          "grams_conversion": 250,
+          "quantity": 1,
+          "type": "portions"
+        },
+        "preferred": {
+          "grams_conversion": 250,
+          "id": 3,
+          "name": "glasses",
+          "quantity": 1,
+          "type": "cooking_measures"
+        }
+      },
+      "recipe": [
+        {
+          "id": 73,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 2,
+              "name": "milliliters",
+              "quantity": 250,
+              "short": "ml",
+              "state": "liquid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 2,
+              "name": "milliliters",
+              "quantity": 250,
+              "short": "ml",
+              "state": "liquid",
+              "type": "weight"
+            }
+          },
+          "name": "water",
+          "unit": "ml",
+          "weight": 250
+        }
+      ],
+      "serving_size": 250,
+      "unit": "ml"
+    },
+    {
+      "dish_id": 782,
+      "foodGroups": [
+        {
+          "id": 8,
+          "name": "vegetables"
+        }
+      ],
+      "food_item_position": 9,
+      "hasRecipe": true,
+      "levels": {
+        "oil": "medium",
+        "salt": "medium",
+        "sugar": "medium"
+      },
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 346,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "portion": {
+          "grams_conversion": 346,
+          "quantity": 1,
+          "type": "portions"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 346,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "recipe": [
+        {
+          "id": 427,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 50,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 50,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "onion",
+          "unit": "g",
+          "weight": 50
+        },
+        {
+          "id": 144,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 80,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 80,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "courgette",
+          "unit": "g",
+          "weight": 80
+        },
+        {
+          "id": 610,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 60,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 60,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "red pepper",
+          "unit": "g",
+          "weight": 60
+        },
+        {
+          "id": 112,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 70,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 70,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "tomato",
+          "unit": "g",
+          "weight": 70
+        },
+        {
+          "id": 145,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 80,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 80,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "asparagus",
+          "unit": "g",
+          "weight": 80
+        },
+        {
+          "id": 562,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 2,
+              "name": "milliliters",
+              "quantity": 5,
+              "short": "ml",
+              "state": "liquid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 10,
+              "id": 1,
+              "name": "tablespoons",
+              "quantity": 0.5,
+              "type": "cooking_measures"
+            }
+          },
+          "name": "oil",
+          "unit": "ml",
+          "weight": 5
+        },
+        {
+          "id": 45,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 1,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 5,
+              "id": 5,
+              "name": "teaspoons",
+              "quantity": 0.2,
+              "type": "cooking_measures"
+            }
+          },
+          "name": "salt",
+          "unit": "g",
+          "weight": 1
+        }
+      ],
+      "serving_size": 346,
+      "unit": "g"
+    },
+    {
+      "dish_id": 1226,
+      "foodGroups": [
+        {
+          "id": 8,
+          "name": "vegetables"
+        }
+      ],
+      "food_item_position": 10,
+      "hasRecipe": true,
+      "levels": {
+        "oil": "medium",
+        "salt": "medium",
+        "sugar": "medium"
+      },
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 150,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "portion": {
+          "grams_conversion": 150,
+          "quantity": 1,
+          "type": "portions"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 150,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "recipe": [
+        {
+          "id": 12,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 150,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 150,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "lettuce",
+          "unit": "g",
+          "weight": 150
+        }
+      ],
+      "serving_size": 150,
+      "unit": "g"
+    },
+    {
+      "dish_id": 1402,
+      "foodGroups": [
+        {
+          "id": 3,
+          "name": "dairy products"
+        }
+      ],
+      "food_item_position": 11,
+      "hasRecipe": true,
+      "levels": {
+        "oil": "medium",
+        "salt": "medium",
+        "sugar": "medium"
+      },
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 30,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "portion": {
+          "grams_conversion": 30,
+          "quantity": 1,
+          "type": "portions"
+        },
+        "preferred": {
+          "grams_conversion": 30,
+          "id": 5,
+          "name": "slices",
+          "quantity": 1,
+          "type": "cooking_measures"
+        }
+      },
+      "recipe": [
+        {
+          "id": 380,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 30,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 30,
+              "id": 19,
+              "name": "portions",
+              "quantity": 1,
+              "type": "cooking_measures"
+            }
+          },
+          "name": "cheese",
+          "unit": "g",
+          "weight": 30
+        }
+      ],
+      "serving_size": 30,
+      "unit": "g"
+    },
+    {
+      "dish_id": 1257,
+      "foodGroups": [
+        {
+          "id": 8,
+          "name": "vegetables"
+        }
+      ],
+      "food_item_position": 12,
+      "hasRecipe": true,
+      "levels": {
+        "oil": "medium",
+        "salt": "medium",
+        "sugar": "medium"
+      },
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 114,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "portion": {
+          "grams_conversion": 114,
+          "quantity": 1,
+          "type": "portions"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 114,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "recipe": [
+        {
+          "id": 175,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 114,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 114,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "pepper",
+          "unit": "g",
+          "weight": 114
+        }
+      ],
+      "serving_size": 114,
+      "unit": "g"
+    },
+    {
+      "dish_id": 1226,
+      "foodGroups": [
+        {
+          "id": 8,
+          "name": "vegetables"
+        }
+      ],
+      "food_item_position": 13,
+      "hasRecipe": true,
+      "levels": {
+        "oil": "medium",
+        "salt": "medium",
+        "sugar": "medium"
+      },
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 150,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "portion": {
+          "grams_conversion": 150,
+          "quantity": 1,
+          "type": "portions"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 150,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "recipe": [
+        {
+          "id": 12,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 150,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 150,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "lettuce",
+          "unit": "g",
+          "weight": 150
+        }
+      ],
+      "serving_size": 150,
+      "unit": "g"
+    },
+    {
+      "dish_id": 1257,
+      "foodGroups": [
+        {
+          "id": 8,
+          "name": "vegetables"
+        }
+      ],
+      "food_item_position": 14,
+      "hasRecipe": true,
+      "levels": {
+        "oil": "medium",
+        "salt": "medium",
+        "sugar": "medium"
+      },
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 114,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "portion": {
+          "grams_conversion": 114,
+          "quantity": 1,
+          "type": "portions"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 114,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "recipe": [
+        {
+          "id": 175,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 114,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 114,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "pepper",
+          "unit": "g",
+          "weight": 114
+        }
+      ],
+      "serving_size": 114,
+      "unit": "g"
+    },
+    {
+      "dish_id": 782,
+      "foodGroups": [
+        {
+          "id": 8,
+          "name": "vegetables"
+        }
+      ],
+      "food_item_position": 15,
+      "hasRecipe": true,
+      "levels": {
+        "oil": "medium",
+        "salt": "medium",
+        "sugar": "medium"
+      },
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 346,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "portion": {
+          "grams_conversion": 346,
+          "quantity": 1,
+          "type": "portions"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 346,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "recipe": [
+        {
+          "id": 427,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 50,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 50,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "onion",
+          "unit": "g",
+          "weight": 50
+        },
+        {
+          "id": 144,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 80,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 80,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "courgette",
+          "unit": "g",
+          "weight": 80
+        },
+        {
+          "id": 610,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 60,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 60,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "red pepper",
+          "unit": "g",
+          "weight": 60
+        },
+        {
+          "id": 112,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 70,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 70,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "tomato",
+          "unit": "g",
+          "weight": 70
+        },
+        {
+          "id": 145,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 80,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 80,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "asparagus",
+          "unit": "g",
+          "weight": 80
+        },
+        {
+          "id": 562,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 2,
+              "name": "milliliters",
+              "quantity": 5,
+              "short": "ml",
+              "state": "liquid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 10,
+              "id": 1,
+              "name": "tablespoons",
+              "quantity": 0.5,
+              "type": "cooking_measures"
+            }
+          },
+          "name": "oil",
+          "unit": "ml",
+          "weight": 5
+        },
+        {
+          "id": 45,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 1,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 5,
+              "id": 5,
+              "name": "teaspoons",
+              "quantity": 0.2,
+              "type": "cooking_measures"
+            }
+          },
+          "name": "salt",
+          "unit": "g",
+          "weight": 1
+        }
+      ],
+      "serving_size": 346,
+      "unit": "g"
+    },
+    {
+      "dish_id": 782,
+      "foodGroups": [
+        {
+          "id": 8,
+          "name": "vegetables"
+        }
+      ],
+      "food_item_position": 16,
+      "hasRecipe": true,
+      "levels": {
+        "oil": "medium",
+        "salt": "medium",
+        "sugar": "medium"
+      },
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 346,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        },
+        "portion": {
+          "grams_conversion": 346,
+          "quantity": 1,
+          "type": "portions"
+        },
+        "preferred": {
+          "grams_conversion": 1,
+          "id": 1,
+          "name": "grams",
+          "quantity": 346,
+          "short": "g",
+          "state": "solid",
+          "type": "weight"
+        }
+      },
+      "recipe": [
+        {
+          "id": 427,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 50,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 50,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "onion",
+          "unit": "g",
+          "weight": 50
+        },
+        {
+          "id": 144,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 80,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 80,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "courgette",
+          "unit": "g",
+          "weight": 80
+        },
+        {
+          "id": 610,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 60,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 60,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "red pepper",
+          "unit": "g",
+          "weight": 60
+        },
+        {
+          "id": 112,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 70,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 70,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "tomato",
+          "unit": "g",
+          "weight": 70
+        },
+        {
+          "id": 145,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 80,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 80,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            }
+          },
+          "name": "asparagus",
+          "unit": "g",
+          "weight": 80
+        },
+        {
+          "id": 562,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 2,
+              "name": "milliliters",
+              "quantity": 5,
+              "short": "ml",
+              "state": "liquid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 10,
+              "id": 1,
+              "name": "tablespoons",
+              "quantity": 0.5,
+              "type": "cooking_measures"
+            }
+          },
+          "name": "oil",
+          "unit": "ml",
+          "weight": 5
+        },
+        {
+          "id": 45,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 1,
+              "name": "grams",
+              "quantity": 1,
+              "short": "g",
+              "state": "solid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 5,
+              "id": 5,
+              "name": "teaspoons",
+              "quantity": 0.2,
+              "type": "cooking_measures"
+            }
+          },
+          "name": "salt",
+          "unit": "g",
+          "weight": 1
+        }
+      ],
+      "serving_size": 346,
+      "unit": "g"
+    },
+    {
+      "dish_id": 1286,
+      "foodGroups": [
+        {
+          "id": 18,
+          "name": "beverage"
+        }
+      ],
+      "food_item_position": 17,
+      "hasRecipe": true,
+      "levels": {
+        "oil": "medium",
+        "salt": "medium",
+        "sugar": "medium"
+      },
+      "measure": {
+        "metric": {
+          "grams_conversion": 1,
+          "id": 2,
+          "name": "milliliters",
+          "quantity": 250,
+          "short": "ml",
+          "state": "liquid",
+          "type": "weight"
+        },
+        "portion": {
+          "grams_conversion": 250,
+          "quantity": 1,
+          "type": "portions"
+        },
+        "preferred": {
+          "grams_conversion": 250,
+          "id": 3,
+          "name": "glasses",
+          "quantity": 1,
+          "type": "cooking_measures"
+        }
+      },
+      "recipe": [
+        {
+          "id": 73,
+          "measure": {
+            "metric": {
+              "grams_conversion": 1,
+              "id": 2,
+              "name": "milliliters",
+              "quantity": 250,
+              "short": "ml",
+              "state": "liquid",
+              "type": "weight"
+            },
+            "preferred": {
+              "grams_conversion": 1,
+              "id": 2,
+              "name": "milliliters",
+              "quantity": 250,
+              "short": "ml",
+              "state": "liquid",
+              "type": "weight"
+            }
+          },
+          "name": "water",
+          "unit": "ml",
+          "weight": 250
+        }
+      ],
+      "serving_size": 250,
+      "unit": "ml"
+    }
+  ],
+  "serving_size": 3134.8,
+  "source": null
+}
