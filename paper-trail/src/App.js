@@ -149,7 +149,7 @@ const ImageUploader = () => {
                     <div className="modal-content">
                         <button className="close-btn" onClick={toggleModal}>✖</button>
                         <h3>Need Help?</h3>
-                        <p>Upload an image of your ingredients, and we will identify them for you!</p>
+                        <p>Upload a picture of your ingredients, and we'll provide healthy recipes using what you have!</p>
                     </div>
                 </div>
             )}

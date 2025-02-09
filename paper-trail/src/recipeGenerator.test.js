@@ -34,7 +34,7 @@ describe('generateRecipes', () => {
     });
     
     it('should test raw api', async () => {
-        const gem2token = process.env.GEM2_ACCESS_TOKEN;
+        const API_KEY = process.env.GEM2_ACCESS_TOKEN;
         const prompt = `Generate a recipe in the following JSON format:
         {
             "name": "Recipe Name",

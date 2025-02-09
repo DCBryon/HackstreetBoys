@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 
-async function generateRecipeText(ingredients, dietaryRestrictions, API_KEY, customPrompt) {
+async function generateRecipeText(ingredients, dietaryRestrictions, gem2token, customPrompt) {
   const modelEndpoint = "https://api-inference.huggingface.co/models/google/gemma-2-2b-it";
 
   // Build the prompt
@@ -18,7 +18,8 @@ async function generateRecipeText(ingredients, dietaryRestrictions, API_KEY, cus
     const response = await fetch(modelEndpoint, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${API_KEY}`,  // Use environment variable
+        "Authorization": `Bearer ${gem2token}`,
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         inputs: prompt,
@@ -81,13 +82,13 @@ function simulateApiResponse(ingredients) {
 }
 
 async function generateRecipes(ingredients, dietaryRestrictions) {
-  const API_KEY = process.env.GEM2_ACCESS_TOKEN; // Store the API key in one place
-  if (!API_KEY) {
+  const gem2token = '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';
+  if (!gem2token) {
     throw new Error("GEM2 API key is missing. Set the GEM2_ACCESS_TOKEN environment variable.");
   }
 
   try {
-    const recipeText = await generateRecipeText(ingredients, dietaryRestrictions, API_KEY);
+    const recipeText = await generateRecipeText(ingredients, dietaryRestrictions, gem2token);
     return recipeText ? recipeText : null;
   } catch (error) {
     console.error("Error in generateRecipes:", error);
