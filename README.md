@@ -1,6 +1,6 @@
-# FreshLens: Recipe Generation from Food Images
+# FreshLens: A Fresh Persepective On Meal Planning
 
-This platform allows users to upload images of food or take pictures directly, identify the food items present, and then generate recipes using those ingredients.
+This platform allows users to upload images of food or take pictures directly, identify the food items present, and then generate healthy recipes using those ingredients.
 
 ## Instructions for Setup and Running
 
@@ -8,15 +8,14 @@ This platform allows users to upload images of food or take pictures directly, i
 
 Before getting started, ensure you have the following installed:
 
-*   **Node.js:** (Version X.X.X or higher recommended) - [https://nodejs.org/](https://nodejs.org/)
+*   **Node.js:** (Version 22.0.0 or higher recommended) - [https://nodejs.org/](https://nodejs.org/)
 *   **npm (Node Package Manager) or yarn:** (Comes with Node.js)
 *   **Git:** (If you want to clone the repository) - [https://git-scm.com/](https://git-scm.com/)
 *   **Postman (Optional):** For testing API endpoints - [https://www.postman.com/](https://www.postman.com/)
-*   **Azure Account:** Required for deployment (If you are deploying to Azure)
 
 ### Installation (For Local Development)
 
-1.  **Clone the Repository (If applicable):**
+1.  **Clone the Repository:**
 
     ```bash
     git clone [https://github.com/your-username/your-repo-name.git](https://www.google.com/search?q=https://github.com/your-username/your-repo-name.git)
