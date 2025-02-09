@@ -65,8 +65,4 @@ app.post("/save-ingredients", (req, res) => {
 // Start the server
 app.listen(PORT, () => {
     console.log(`🚀 Server is running on http://localhost:${PORT}`);
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 7fa4e72f83095cf00d7b146b7fadd14250595418
