@@ -5,7 +5,7 @@
   align-items: center;
   flex: auto;
   flex-direction: column;
-  background-color: #f0f4f7; /* Soft light background for the whole app */
+  background-color: #E5EAD6; /* Soft light background for the whole app */
   height: 100%; /* Full height to center elements */
 }
 
@@ -14,7 +14,7 @@
 }
 
 button {
-  background-color: #4CAF50; /* Primary green color */
+  background-color: #4E7151; /* Primary green color */
   color: white;
   padding: 10px 24px;
   font-size: 1em;
@@ -34,9 +34,9 @@ h2 {
 
 .list-box {
   padding: 20px;
-  border: 2px solid #A1B5C4; /* Soft gray-blue border */
+  border: 2px solid #4E7151; /* Soft gray-blue border */
   border-radius: 8px;
-  background-color: #ffffff; /* Clean white background */
+  background-color: #B6C397;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   width: 80%; /* Control width of the list box */
   max-width: 400px; /* Maximum width for better responsiveness */
@@ -49,8 +49,8 @@ h2 {
 }
 
 .list-box li {
-  background-color: #f7f9fc; /* Soft light blue background for list items */
-  border: 2px solid #d1dbe5; /* Light gray border */
+  background-color: #FCF9F0; /* Soft light blue background for list items */
+  border: 2px solid #E5EAD6;
   border-radius: 10px;
   padding: 8px;
   margin-bottom: 12px;
@@ -102,4 +102,85 @@ h2 {
 
 .view-recipes-btn {
   margin-top: 10px;
+}
+
+/* Header container for alignment */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Help button styling */
+.help-btn {
+  background-color: #db7a39;
+  color: white;
+  border: none;
+  width: 20px;
+  height: 35px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.help-btn:hover {
+  background-color: #ce7234;
+}
+
+.help-btn:active {
+  transform: scale(0.95);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal box */
+.modal-content {
+  background: white;
+  padding: 50px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Close button (X) */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-left: 10px;
+}
+
+/* Hover effect for close button */
+.close-btn:hover {
+  background: darkred;
+}
+
+img {
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }

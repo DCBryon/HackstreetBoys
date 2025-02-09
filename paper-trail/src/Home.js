@@ -24,7 +24,7 @@ function Home() {
             <Navbar />
             <App />
       <footer>
-        <p>&copy; 2025 My Homepage</p>
+        <p>&copy; 2025 HackStreet Boys</p>
       </footer>
     </div>
   );

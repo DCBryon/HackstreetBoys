@@ -8,6 +8,7 @@ const ImageUploader = () => {
     const [previewURL, setPreviewURL] = useState("");
     const [ingredients, setIngredients] = useState([]);
     const [newIngredient, setNewIngredient] = useState("");
+    const [showModal, setShowModal] = useState(false);
 
     // Load ingredients from local storage on component mount
     useEffect(() => {
@@ -24,6 +25,11 @@ const ImageUploader = () => {
             setSelectedFile(file);
             setPreviewURL(URL.createObjectURL(file));
         }
+    };
+
+    // Function to toggle the modal visibility
+    const toggleModal = () => {
+        setShowModal(!showModal);
     };
 
     // Handle file upload and Logmeal API interaction
@@ -113,7 +119,19 @@ const ImageUploader = () => {
 
     return (
         <div className='App' tyle={{ textAlign: "center", padding: "20px" }}>
-            <h2>Upload an Image of Your Ingredients!</h2>
+             <div className="header-container">
+                <h2>Upload an Image of Your Ingredients!</h2>
+                <button className="help-btn" onClick={toggleModal}>?</button>
+            </div>
+            {showModal && (
+                <div className="modal-overlay">
+                    <div className="modal-content">
+                        <button className="close-btn" onClick={toggleModal}>✖</button>
+                        <h3>Need Help?</h3>
+                        <p>Upload an image of your ingredients, and we will identify them for you!</p>
+                    </div>
+                </div>
+            )}
             <input type="file" accept="image/*" onChange={handleFileChange} />
             {previewURL && (
                 <img

@@ -7,7 +7,7 @@
   
   body {
     font-family: Arial, sans-serif; /* Use consistent font */
-    background-color: #f5f5f5; /* Light background color for the page */
+    background-color: #E5EAD6; /* Light background color for the page */
     color: #333; /* Dark text color for readability */
   }
   
@@ -17,17 +17,17 @@
   }
   
   .Home-header {
-    background-color: #282c34; /* Dark background for header */
+    background-color: #4E7151; /* Dark background for header */
     padding: 40px;
     color: white;
     font-size: 2.5em; /* Larger text for header */
     font-weight: bold; /* Bold text for emphasis */
-    border-bottom: 3px solid #4CAF50; /* Green border for header separation */
+    border-bottom: 3px solid #E5EAD6; /* Green border for header separation */
   }
   
   /* Footer */
   footer {
-    background-color: #282c34; /* Match footer with header */
+    background-color: #4E7151; /* Match footer with header */
     padding: 20px;
     color: white;
     text-align: center; /* Center footer text */
@@ -37,7 +37,7 @@
   
   /* Navbar */
   .navbar {
-    background-color: #333; /* Dark navbar for consistency */
+    background-color: #B6C397; /* Dark navbar for consistency */
     padding: 15px; /* Increase padding for a more spacious look */
     width: 100%;
     top: 0;
@@ -71,6 +71,6 @@
   }
   
   .nav-links a:hover {
-    background-color: #4CAF50; /* Green for hover effect */
+    background-color: #4E7151; /* Green for hover effect */
     color: white; /* Keep text white on hover */
   }
