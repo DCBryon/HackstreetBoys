@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
 
-const API_KEY = "37158ecad1496b88e0ccf230ee00a86ccd57bc2b"; // Store the API key in one place
+const API_KEY = process.env.REACT_APP_API_KEY; // Store the API key in one place
 
 const ImageUploader = () => {
     const [selectedFile, setSelectedFile] = useState(null);
@@ -44,16 +44,13 @@ const ImageUploader = () => {
     
         try {
             // Upload the image to Logmeal for segmentation
-            const uploadResponse = await fetch(
-                "https://api.logmeal.com/v2/image/segmentation/complete",
-                {
-                    method: "POST",
-                    headers: {
-                        Authorization: `Bearer ${API_KEY}`,
-                    },
-                    body: formData,
-                }
-            );
+            const uploadResponse = await fetch("https://api.logmeal.com/v2/image/segmentation/complete", {
+                method: "POST",
+                headers: {
+                    Authorization: `Bearer ${API_KEY}`,  // Use environment variable
+                },
+                body: formData,
+            });
     
             if (!uploadResponse.ok) {
                 console.error("Upload failed:", uploadResponse.statusText);
