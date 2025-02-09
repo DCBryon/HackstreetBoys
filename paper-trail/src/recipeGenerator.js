@@ -1,128 +1,3 @@
-// async function generateRecipesInternal(ingredients, dietaryRestrictions, gem2token, customPrompt) {
-//     const modelEndpoint = "https://api-inference.huggingface.co/models/google/gemma-2-2b-it";
-
-//     try {
-//         let prompt;
-
-//         if (customPrompt) {
-//             prompt = customPrompt;
-//         } else {
-//             prompt = `Generate a recipe in the following JSON format:
-//             {
-//                 "name": "Recipe Name",
-//                 "description": "A short description",
-//                 "ingredients": ["ingredient 1", "ingredient 2", ...],
-//                 "instructions": ["step 1", "step 2", ...]
-//             }
-//             using the following ingredients: ${ingredients.join(", ")}.`;
-
-//             if (dietaryRestrictions) {
-//                 prompt += ` Consider these dietary restrictions: ${dietaryRestrictions.join(", ")}.`;
-//             }
-//         }
-
-//         console.log("Prompt being sent to API:", prompt);
-
-//         const response = await fetch(modelEndpoint, {
-//             method: "POST",
-//             headers: {
-//                 "Authorization": `Bearer ${gem2token}`,
-//                 "Content-Type": "application/json",
-//             },
-//             body: JSON.stringify({
-//                 inputs: prompt,
-//                 max_new_tokens: 1024
-//             }),
-//         });
-
-//         console.log("Full Response Object:", response);
-
-//         if (!response.ok) {  // Check for HTTP errors IMMEDIATELY
-//             const errorText = await response.text(); // Get error details if possible
-//             throw new Error(`API Error: ${response.status} - ${errorText}`); // Throw an error
-//         }
-
-//         let data;
-//         try {
-//             data = await response.json();
-//             console.log("Parsed JSON Response Data:", data);
-
-//             if (data && data.error) {
-//                 console.error("Hugging Face API returned an error in JSON:", data.error);
-//                 throw new Error(data.error);
-//             }
-//         } catch (jsonError) {
-//             console.error("Error parsing JSON:", jsonError);
-//             throw new Error("Invalid JSON response from API"); // Re-throw a new error
-//         }
-
-//         // Check if the parsed data has the expected structure
-//         if (!data || !Array.isArray(data) || data.length === 0 || !data[0].generated_text) {
-//             console.error("Unexpected data format:", data);
-//             throw new Error("Unexpected data format from API");
-//         }
-
-
-//         let recipesText = data[0].generated_text; // Extract the generated text
-
-//         console.log("recipesText being passed to parseRecipes:", recipesText);
-
-//         const recipes = parseRecipes(recipesText);
-
-//         console.log("Output of parseRecipes:", recipes);
-
-//         return recipes;
-
-//     } catch (error) {
-//         console.error("Error generating recipes:", error);
-//         throw error; // Re-throw the error to ensure the promise rejects
-//     }
-// }
-
-// async function generateRecipes(ingredients, dietaryRestrictions) {
-//     const gem2token = process.env.GEM2_ACCESS_TOKEN;
-
-//     if (!gem2token) {
-//         throw new Error("GEM2 API key is missing. Set the GEM2_ACCESS_TOKEN environment variable.");
-//     }
-
-//     return generateRecipesInternal(ingredients, dietaryRestrictions, gem2token);
-// }
-
-
-
-// // **Crucial: Parsing Function**
-// function parseRecipes(recipesText) {
-//     try {
-//         return JSON.parse(recipesText); // Try JSON parsing first
-//     } catch (jsonError) {
-//         console.error("JSON parsing failed:", jsonError);
-//         console.error("Failing string:", recipesText);
-
-//         try {  // Fallback: Try extracting with regex
-//             const recipes = [];
-//             const recipeMatch = recipesText.match(/## Recipe: (.+)\n\n(.+)\n\n\*\*Ingredients:\*\*\n\n(.+)\n\n\*\*Instructions:\*\*\n\n(.+)/s); // Adjust regex as needed
-
-//             if (recipeMatch) {
-//                 const recipe = {
-//                     name: recipeMatch[1],
-//                     description: recipeMatch[2],
-//                     ingredients: recipeMatch[3].split('\n').map(i => i.trim().replace(/^\* /, '')).filter(i => i !== ''), // Clean up ingredients
-//                     instructions: recipeMatch[4].split('\n').map(i => i.trim().replace(/^\d+\. /, '')).filter(i => i !== '') // Clean up instructions
-//                 };
-//                 recipes.push(recipe);
-//             }
-//             return recipes;
-
-//         } catch (regexError) {
-//             console.error("Regex parsing failed:", regexError);
-//             return []; // Return empty array if all parsing fails
-//         }
-//     }
-// }
-
-// module.exports = { generateRecipes, parseRecipes, generateRecipesInternal }; // Add generateRecipesInternal
-
 // Improved: generateRecipesInternal
 async function generateRecipesInternal(ingredients, dietaryRestrictions, gem2token, customPrompt) {
     const modelEndpoint = "https://api-inference.huggingface.co/models/google/gemma-2-2b-it";
@@ -132,14 +7,14 @@ async function generateRecipesInternal(ingredients, dietaryRestrictions, gem2tok
     if (customPrompt && customPrompt.trim()) {
       prompt = customPrompt.trim();
     } else {
-      prompt = `Generate a recipe in the following JSON format without trailing commas:
+      prompt = `Generate a healthy and tasty recipe in the following JSON format without trailing commas:
   {
     "name": "Recipe Name",
     "description": "A short description",
     "ingredients": ["ingredient 1", "ingredient 2"],
     "instructions": ["step 1", "step 2"]
   }
-  Using the following ingredients: ${ingredients.join(", ")}.`;
+  Using some or all of the following ingredients: ${ingredients.join(", ")}.`;
       if (dietaryRestrictions && dietaryRestrictions.length > 0) {
         prompt += ` Consider these dietary restrictions: ${dietaryRestrictions.join(", ")}.`;
       }
@@ -227,7 +102,7 @@ async function generateRecipesInternal(ingredients, dietaryRestrictions, gem2tok
   
   // Public wrapper function that returns null if the result is the default sample.
   async function generateRecipes(ingredients, dietaryRestrictions) {
-    const gem2token = process.env.GEM2_ACCESS_TOKEN;
+    const gem2token = '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';
     if (!gem2token) {
       throw new Error("GEM2 API key is missing. Set the GEM2_ACCESS_TOKEN environment variable.");
     }
