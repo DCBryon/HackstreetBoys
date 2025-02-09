@@ -1,13 +1,19 @@
-<<<<<<< HEAD
-// server.js (Your backend server)
-require('dotenv').config() // for env variables
+require('dotenv').config(); // for env variables
 
 const express = require('express');
-const app = express();
+const cors = require('cors');
+const fs = require('fs');
 const { generateRecipes } = require('./src/recipeGenerator'); // Import the function
+const { readAndSortIngredients } = require("./processIngredients"); // Import the function to read ingredients
 
+const app = express();
+const PORT = process.env.PORT || 5000; // Define the port
+
+// Middleware
+app.use(cors());
 app.use(express.json()); // To parse JSON request bodies
 
+// API route: Generate recipes based on ingredients and dietary restrictions
 app.post('/generate', async (req, res) => {
     const { ingredients, dietaryRestrictions } = req.body;
 
@@ -19,23 +25,6 @@ app.post('/generate', async (req, res) => {
         res.status(500).json({ error: "Failed to generate recipes" }); // Send an error response
     }
 });
-
-const port = process.env.PORT || 5000; // Define a port
-app.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
-});
-=======
-const express = require("express");
-const cors = require("cors");
-const fs = require("fs");
-const { readAndSortIngredients } = require("./processIngredients");
-
-const app = express();
-const PORT = 5000;
-
-// Middleware
-app.use(cors());
-app.use(express.json());
 
 // API route: Get ingredients (sorted immediately)
 app.get("/api/ingredients", (req, res) => {
@@ -73,9 +62,7 @@ app.post("/save-ingredients", (req, res) => {
     }
 });
 
-
-// Start server
+// Start the server
 app.listen(PORT, () => {
     console.log(`🚀 Server is running on http://localhost:${PORT}`);
 });
->>>>>>> 8b5263c6dc583c27a179484c4fc52261b4529aa0
