@@ -6,7 +6,7 @@ This platform allows users to upload images of food or take pictures directly, i
 
 Visit the live FreshLens web app directly at:
 
-[https://your-azure-web-app-url.azurewebsites.net](https://your-azure-web-app-url.azurewebsites.net) *(Replace with your actual URL)*
+https://freshlens.azurewebsites.net
 ## Instructions for Setup and Running
 
 ### Prerequisites
