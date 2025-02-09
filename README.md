@@ -1,29 +1,49 @@
-# FreshLens Overview
-### API key is not located in the repo, as I believe that is bad practice. So we'll just send it out when needed :)
-Core functionality still needed:
-  - ~~Take the output of the logmeal API (json), and format it into usable text.~~
-  - Get an ai API working on our web app. (openai, gemini, etc.)
-  - Feed the ai all the ingredients and get it to generate recipes
-  - Display the recipes in a user friendly format
-    
-Nice to haves:
-  - Allow user to add & remove items in the list of detected foods
-  - Prettty formatting
-  - Display recipes not yet avalible with suggestions for what ingredients must be purchased
-  - Chatbot to ask questions
-  - Scale how many items to include in the recipe
-  - Recipe categories
-  - Dietary restrictions
-  - Nutritional facts of each recipe
+# FreshLens: Recipe Generation from Food Images
 
+This platform allows users to upload images of food or take pictures directly, identify the food items present, and then generate recipes using those ingredients.
 
-We got this team :D
+## Instructions for Setup and Running
 
-### Also I changed our default directory, to "Backend-test", so watch out for that
+### Prerequisites
 
-# Setup
+Before getting started, ensure you have the following installed:
 
-## 1. How to Download
-...
-## 2. How to Use
-...
+*   **Node.js:** (Version X.X.X or higher recommended) - [https://nodejs.org/](https://nodejs.org/)
+*   **npm (Node Package Manager) or yarn:** (Comes with Node.js)
+*   **Git:** (If you want to clone the repository) - [https://git-scm.com/](https://git-scm.com/)
+*   **Postman (Optional):** For testing API endpoints - [https://www.postman.com/](https://www.postman.com/)
+*   **Azure Account:** Required for deployment (If you are deploying to Azure)
+
+### Installation (For Local Development)
+
+1.  **Clone the Repository (If applicable):**
+
+    ```bash
+    git clone [https://github.com/your-username/your-repo-name.git](https://www.google.com/search?q=https://github.com/your-username/your-repo-name.git)
+    cd your-repo-name
+    ```
+
+2.  **Install Dependencies:**
+
+    ```bash
+    npm install  # or yarn install
+    ```
+
+3.  **Environment Variables:**
+
+    *   Create a `.env` file in the root directory of your project.
+    *   Add the following environment variables to the `.env` file:
+
+        ```
+        GEM2_ACCESS_TOKEN=your_hugging_face_access_token
+        # Add any other environment variables here, like API keys, database credentials, etc.
+        ```
+
+    *   **Important:** Do *not* commit your `.env` file to version control. It should be in `.gitignore`.
+
+### Running the Application (For Local Development)
+
+**Development Server:**
+
+```bash
+npm start  # or yarn start
