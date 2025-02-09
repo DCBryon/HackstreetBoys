@@ -2,6 +2,11 @@
 
 This platform allows users to upload images of food or take pictures directly, identify the food items present, and then generate healthy recipes using those ingredients.
 
+## Access the Live Application
+
+Visit the live FreshLens web app directly at:
+
+[https://your-azure-web-app-url.azurewebsites.net](https://your-azure-web-app-url.azurewebsites.net) *(Replace with your actual URL)*
 ## Instructions for Setup and Running
 
 ### Prerequisites
