@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
 
-const API_KEY = "ENTER KEY"; // Store the API key in one place
+const API_KEY = "37158ecad1496b88e0ccf230ee00a86ccd57bc2b"; // Store the API key in one place
 
 const ImageUploader = () => {
     const [selectedFile, setSelectedFile] = useState(null);
@@ -32,10 +32,10 @@ const ImageUploader = () => {
             alert("Please select a file first.");
             return;
         }
-
+    
         const formData = new FormData();
         formData.append("image", selectedFile);
-
+    
         try {
             // Upload the image to Logmeal for segmentation
             const uploadResponse = await fetch(
@@ -48,15 +48,15 @@ const ImageUploader = () => {
                     body: formData,
                 }
             );
-
+    
             if (!uploadResponse.ok) {
                 console.error("Upload failed:", uploadResponse.statusText);
                 return;
             }
-
+    
             const uploadData = await uploadResponse.json();
             console.log("Image Segmentation Success:", uploadData);
-
+    
             // Fetch ingredients information using the imageId from segmentation
             const ingredientsResponse = await fetch(
                 "https://api.logmeal.com/v2/recipe/ingredients",
@@ -71,22 +71,30 @@ const ImageUploader = () => {
                     }),
                 }
             );
-
+    
             if (!ingredientsResponse.ok) {
                 console.error("Ingredients Fetch failed:", ingredientsResponse.statusText);
                 return;
             }
-
+    
             const ingredientsData = await ingredientsResponse.json();
-            setIngredients(ingredientsData.foodName || []);
-
+            const sortedIngredients = ingredientsData.foodName || [];
+    
+            // Sort ingredients alphabetically before saving them
+            const sortedAndFilteredIngredients = [...new Set(sortedIngredients)]  // Remove duplicates
+                .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())); // Sort alphabetically
+    
             // Save ingredients to local storage
-            localStorage.setItem("ingredientsData", JSON.stringify(ingredientsData.foodName || []));
+            localStorage.setItem("ingredientsData", JSON.stringify(sortedAndFilteredIngredients));
+            setIngredients(sortedAndFilteredIngredients);
+    
             console.log("Ingredients data saved to local storage");
+    
         } catch (error) {
             console.error("Error uploading file:", error);
         }
     };
+    
 
     const addIngredient = () => {
         if (newIngredient.trim() !== "") {

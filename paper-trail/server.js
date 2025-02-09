@@ -18,7 +18,7 @@ app.get("/api/ingredients", (req, res) => {
     res.json(ingredients);
 });
 
-// API route: Save ingredients
+// Save ingredients route (server.js)
 app.post("/save-ingredients", (req, res) => {
     const ingredientsData = req.body;
 
@@ -27,17 +27,25 @@ app.post("/save-ingredients", (req, res) => {
     }
 
     const currentData = readAndSortIngredients();
-    currentData.push(...ingredientsData.foodName);
 
-    // Sort the data after adding the new ingredients
-    currentData.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+    // Merge new ingredients with existing ones
+    let updatedData = [...currentData, ...ingredientsData.foodName];
 
-    // Write the sorted data back to the file
-    fs.writeFileSync("IngredientsData.json", JSON.stringify(currentData, null, 2));
+    // Remove duplicates and sort alphabetically
+    updatedData = [...new Set(updatedData)]  // Remove duplicates
+        .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())); // Sort alphabetically
 
-    console.log("✅ Ingredients saved and sorted:", ingredientsData);
-    res.status(201).json({ message: "Ingredients saved and sorted successfully!" });
+    // Write the sorted and filtered data back to the file
+    try {
+        fs.writeFileSync("IngredientsData.json", JSON.stringify(updatedData, null, 2));
+        console.log("✅ Ingredients saved and sorted:", updatedData);
+        res.status(201).json({ message: "Ingredients saved and sorted successfully!" });
+    } catch (error) {
+        console.error("Error saving ingredients:", error);
+        res.status(500).json({ message: "Error saving ingredients!" });
+    }
 });
+
 
 // Start server
 app.listen(PORT, () => {

@@ -1,14 +1,17 @@
-// processIngredients.js
-
 const fs = require("fs");
 
-// Read and process ingredients data
 const readAndSortIngredients = () => {
     if (!fs.existsSync("IngredientsData.json")) {
         return [];
     }
 
-    const data = fs.readFileSync("IngredientsData.json", "utf-8");
+    let data;
+    try {
+        data = fs.readFileSync("IngredientsData.json", "utf-8");
+    } catch (error) {
+        console.error("Error reading IngredientsData.json:", error);
+        return []; // Return empty array if reading fails
+    }
 
     let jsonData = {};
     try {
@@ -18,7 +21,6 @@ const readAndSortIngredients = () => {
         return []; // Return empty array if parsing fails
     }
 
-    // Extract foodName array (ingredients) from the JSON data
     let ingredients = jsonData.foodName || [];
 
     // Check if ingredients is an array
@@ -27,8 +29,9 @@ const readAndSortIngredients = () => {
         return [];
     }
 
-    // Sort ingredients alphabetically by name (case-insensitive)
-    ingredients.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+    // Remove duplicates and sort alphabetically
+    ingredients = [...new Set(ingredients)]  // Remove duplicates
+        .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())); // Sort alphabetically
 
     return ingredients;
 };
