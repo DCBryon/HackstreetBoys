@@ -7,6 +7,7 @@ const ImageUploader = () => {
     const [selectedFile, setSelectedFile] = useState(null);
     const [previewURL, setPreviewURL] = useState("");
     const [ingredients, setIngredients] = useState([]);
+    const [newIngredient, setNewIngredient] = useState("");
 
     // Load ingredients from local storage on component mount
     useEffect(() => {
@@ -87,6 +88,15 @@ const ImageUploader = () => {
         }
     };
 
+    const addIngredient = () => {
+        if (newIngredient.trim() !== "") {
+            const updatedIngredients = [...ingredients, newIngredient.trim()];
+            setIngredients(updatedIngredients);
+            //localStorage.setItem("ingredientsData", JSON.stringify(updatedIngredients));
+            setNewIngredient("");
+        }
+    };
+
     const removeIngredient = (index) => {
         const updatedIngredients = ingredients.filter((_, i) => i !== index);
         setIngredients(updatedIngredients);
@@ -125,6 +135,15 @@ const ImageUploader = () => {
                             </li>
                         ))}
                     </ul>
+                    <div className="manual-input">
+                        <input
+                            type="text"
+                            placeholder="Enter ingredient"
+                            value={newIngredient}
+                            onChange={(e) => setNewIngredient(e.target.value)}
+                        />
+                        <button onClick={addIngredient} className="add-btn">Add</button>
+                    </div>
                 </div>
             )}
         </div>

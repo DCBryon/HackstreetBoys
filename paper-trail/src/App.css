@@ -9,8 +9,8 @@
   height: 100%; /* Full height to center elements */
 }
 
-h2 {
-  padding: 20px;
+.list-box h3 {
+  padding-bottom: 20px;
 }
 
 button {
@@ -48,7 +48,7 @@ button:hover {
   background-color: #f7f9fc; /* Soft light blue background for list items */
   border: 2px solid #d1dbe5; /* Light gray border */
   border-radius: 10px;
-  padding: 12px;
+  padding: 8px;
   margin-bottom: 12px;
   color: #333333; /* Darker text for readability */
 }
@@ -76,4 +76,17 @@ button:hover {
 
 .remove-btn:hover {
   background-color: darkred;
+}
+
+.manual-input {
+  padding: 10px;
+}
+
+.manual-input input {
+  padding: 10px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  font-size: 1em; /* Increased font size */
+  width: 250px; /* Wider input field */
+  transition: border-color 0.3s ease;
 }
