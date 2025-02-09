@@ -18,8 +18,8 @@ Before getting started, ensure you have the following installed:
 1.  **Clone the Repository:**
 
     ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://www.google.com/search?q=https://github.com/your-username/your-repo-name.git)
-    cd your-repo-name
+    git clone https://github.com/DCBryon/HackstreetBoys.git
+    cd HackstreetBoys
     ```
 
 2.  **Install Dependencies:**
